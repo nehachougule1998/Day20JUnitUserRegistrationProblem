@@ -5,26 +5,32 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class TestCase {
-	UserRegistration ur = new UserRegistration();
+
+UserRegistration ur = new UserRegistration();
+	
 	@Test
-	void testFirstname() {
+	void testFirstName() {
 		assertTrue(ur.firstName("Neha"));
 	}
 	
 	@Test
-	void testLastname() {
+	void testLastName() {
 		assertTrue(ur.lastName("Chougule"));
 	}
+	
 	@Test
-	void testEmailid() {
-		assertTrue(ur.emailId("abc.neha@bl.co"));
+	void testEmailID() {
+		assertTrue(ur.emailId("xyz.neha@bl.co"));
 	}
+	
 	@Test
-	void testMobilenumber() {
-		assertTrue(ur.mobileNumber("91 9623453617"));
+	void testMobileNumber() {
+		assertTrue(ur.mobileNumber("91 9764485972"));
 	}
+	
 	@Test
 	void testPassword() {
-		assertTrue(ur.password("neha@12"));
+		assertTrue(ur.password("Neha@67"));
 	}
+
 }
