@@ -15,6 +15,8 @@ public static void main(String[] args) {
 		String emailId = scan.nextLine();
 		System.out.println("Enter your Mobile Number:");
 		String mobileNumber = scan.nextLine();
+		System.out.println("Enter password:");
+		String password = scan.nextLine();
 		
 		System.out.println("first name is : " +firstName);
 		System.out.println("first name is valid ? " + firstName(firstName));
@@ -27,6 +29,8 @@ public static void main(String[] args) {
 		
 		System.out.println("Mobile No is : " +mobileNumber);
 		System.out.println("Mobile No valid ? " + mobileNumber(mobileNumber));
+		
+		System.out.println("Password valid ? " + password(password));
 		
 	}
 	
@@ -45,7 +49,12 @@ public static void main(String[] args) {
 	public static boolean mobileNumber(String mobileNumber) {
 		return mobileNumber.matches("^(91)\\s{1}[7-9]{1}[0-9]{9}$");
 	}
-
-
+	
+	public static boolean password(String password) {
+		String pattern = "[a-zA-Z0-9]{8,}$";
+		if(password.matches(pattern)) {
+			return true;
+		}
+		return false;
+	}
 }
-
