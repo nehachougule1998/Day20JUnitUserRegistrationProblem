@@ -5,10 +5,13 @@ import java.util.regex.Pattern;
 public class UserRegistration {
 	
    public static void main(String[] args) {
-	   Scanner sc = new Scanner(System.in);
-		System.out.println("Enter your last name :");
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your first name :");
 		String firstName = sc.nextLine();
+		System.out.println("Enter your last name :");
 		String lastName = sc.nextLine();
+		System.out.println("Enter your Email ID :");
+		String emailId = sc.nextLine();
 		
 		System.out.println("first name is : " +firstName);
 		System.out.println("first name is valid ? " + firstName(firstName));
@@ -16,16 +19,21 @@ public class UserRegistration {
 		System.out.println("last name is : " +lastName);
 		System.out.println("last name is valid ? " + lastName(lastName));
 		
+		System.out.println("Email ID is : " +emailId);
+		System.out.println("Email ID valid ? " + emailId(emailId));
+		
 	}
 	
-	private static boolean firstName(String firstName) {
-		
+	public static boolean firstName(String firstName) {
 		return firstName.matches("[A-Z]{1}[a-z]{3}");	
 	}
 	
-	private static boolean lastName(String lastName) {
-		
+	public static boolean lastName(String lastName) {
 		return lastName.matches("[A-Z]{1}[a-z]{3}");
+	}
+	
+	public static boolean emailId(String emailId) {
+		return emailId.matches("[abc](.+){1}[A-Za-z]*+@{1}[bl](.+)[co](.+)[in]$");
 	}
 
 }
